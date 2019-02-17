@@ -20,7 +20,7 @@ Reference:
 5、第n-1轮比较迭代，需要比较n-(n-1)次，此时完成冒泡排序操作。
 
 时间复杂度：o(n^2) = (n-1)*(n-1)
-
+稳定性：稳定
 改进：当某一轮迭代中没有交换位置的操作，说明已经排好序了，就没必要再循环了，break退出循环即可。
 
 复杂度分析：
@@ -31,8 +31,8 @@ Reference:
 
 def BubbleSort(array):
     array_len = len(array)
-    for i in range(array_len - 1):    # n-1轮
-        for j in range(array_len - 1 - i):    # 原本应该比较n-i次，但程序中i的起始值为0，而不是1，所以为n-1-i
+    for i in range(array_len - 1):    # 每轮找最大值排最后，所以要迭代n-1轮
+        for j in range(array_len - 1 - i):    # 原本应该比较n-i次，但程序中i的起始值为0，而实际是1，所以为n-1-i
             if array[j] > array[j+1]:
                 array[j], array[j+1] = array[j+1], array[j]
 
