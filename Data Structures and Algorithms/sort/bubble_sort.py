@@ -42,4 +42,4 @@ if __name__ == '__main__':
     array = [1, 3, 8, 5, 2, 10, 7, 16, 7, 4, 5]
     print("Original array: ", array)
     array = BubbleSort(array)
-    print("SelectionSort: ", array)
+    print("BubbleSort: ", array)
