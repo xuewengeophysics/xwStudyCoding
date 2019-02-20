@@ -40,7 +40,7 @@ def partition(array, start, end):
     for j in range(start, end):
         if array[j] <= pivot:
             less_index = less_index + 1
-            # 目的是将小于pivot的数存在less_index中，大于pivot的数存在j中
+            # 目的是将小于等于pivot的数存在[start, less_index]中，大于pivot的数存在[less_index+1, j]中
             array[less_index], array[j] = array[j], array[less_index]    # 对start而言于不交换；其它情况为大小值互换位置
     # 将less_index+1是一个分界点，并将其与最后一个值交换
     array[less_index+1], array[end] = pivot, array[less_index+1]
