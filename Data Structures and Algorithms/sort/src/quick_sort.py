@@ -25,11 +25,11 @@ Reference:
 2、空间复杂度：平均O(nlogn)；最好O(nlogn)；最差O(n)。
 
 """
-def QuickSort(array, start, end):
+def quickSort(array, start, end):
     if start < end:
         pivotLocation = partition(array, start, end)
-        QuickSort(array, start, pivotLocation-1)
-        QuickSort(array, pivotLocation+1, end)
+        quickSort(array, start, pivotLocation-1)
+        quickSort(array, pivotLocation+1, end)
 
 # 数组分段
 def partition(array, start, end):
@@ -49,7 +49,7 @@ def partition(array, start, end):
 if __name__ == '__main__':
     array = [1, 3, 8, 5, 2, 10, 7, 16, 7, 4, 5]
     print("Original array: ", array)
-    # array = QuickSort(array, 0, len(array)-1)
+    # array = quickSort(array, 0, len(array)-1)
     # 因为python中的list对象是可变对象，所以在函数做"形参"时，是相当于按引用传递
     # 所以不写成返回值的形式，也是OK的
     QuickSort(array, 0, len(array) - 1)
