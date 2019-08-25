@@ -52,5 +52,5 @@ if __name__ == '__main__':
     # array = quickSort(array, 0, len(array)-1)
     # 因为python中的list对象是可变对象，所以在函数做"形参"时，是相当于按引用传递
     # 所以不写成返回值的形式，也是OK的
-    QuickSort(array, 0, len(array) - 1)
+    quickSort(array, 0, len(array) - 1)
     print("QuickSort: ", array)
